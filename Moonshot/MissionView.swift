@@ -64,6 +64,9 @@ struct MissionView: View {
         }
         .navigationTitle(mission.displayName)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(for: Astronaut.self) { crewMember in
+            AstronautView(astronaut: crewMember)
+        }
         .background(.darkBackground)
     }
     
